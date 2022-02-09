@@ -6,10 +6,14 @@ const posts = require('./server/routes/posts');
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.use('/posts', posts);
+app.post('/posts');
 
-app.get('*' (req,res)=>{
-  res.sendFile(path.join(__dirname,'dist/index.html'))
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/index.html'))
 });
 
-app.listen(4600 , (req, res))
+const port = process.env.PORT || 4600;
+
+app.listen(port, (req, res) => {
+  console.log('Running. On port ${port}');
+})
