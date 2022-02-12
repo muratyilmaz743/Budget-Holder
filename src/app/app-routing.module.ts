@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AddingPageComponent} from './adding-page/adding-page.component';
-import {MainPageComponent} from "./main-page/main-page.component";
+import {DataTableComponent} from "./data-table/data-table.component";
 
 const routes: Routes = [
   {path: 'add', component: AddingPageComponent},
-  {path: 'budget', component: MainPageComponent}
+  {path: 'budget', component: DataTableComponent}
 ];
 
 @NgModule({
@@ -13,4 +13,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
-export const routingComponents = [AddingPageComponent,MainPageComponent]
+export const routingComponents = [AddingPageComponent,DataTableComponent]
