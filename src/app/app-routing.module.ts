@@ -5,7 +5,7 @@ import {DataTableComponent} from "./data-table/data-table.component";
 
 const routes: Routes = [
   {path: 'add', component: AddingPageComponent},
-  {path: 'budget', component: DataTableComponent}
+  {path: '', component: DataTableComponent}
 ];
 
 @NgModule({
