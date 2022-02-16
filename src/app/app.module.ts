@@ -9,13 +9,17 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegisterPageComponent } from './register-page/register-page.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddingPageComponent,
     routingComponents,
-    DataTableComponent
+    DataTableComponent,
+    RegisterPageComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
