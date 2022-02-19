@@ -1,9 +1,10 @@
+@import "src/styles";
 a {
   width: 100%;
   display: flex;
   justify-content: center;
   text-decoration: inherit;
-  color: inherit;
+  color: black;
   text-align: center;
 }
 
@@ -12,5 +13,9 @@ a {
   font-size: 25px;
   border-radius: 0 0 50% 50% ;
   height: 60px;
-  background-color: wheat;
+  transition: background-color 0.4s;
+  background-color: $element-background;
+  &:hover{
+    background-color: $dark-theme-background;
+  }
 }
