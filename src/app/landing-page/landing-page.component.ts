@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-landing-page',
@@ -12,4 +12,10 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  signingFunc() {
+    /*wrong pass*/
+
+    document.getElementById('signingBtn')?.classList.add(' border-red-500');
+    document.getElementById('wrongPass')?.classList.remove('hidden');
+  }
 }
