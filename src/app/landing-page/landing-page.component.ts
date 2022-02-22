@@ -14,8 +14,11 @@ export class LandingPageComponent implements OnInit {
 
   signingFunc() {
     /*wrong pass*/
+      this.wrongPassword();
+  }
 
-    document.getElementById('signingBtn')?.classList.add(' border-red-500');
-    document.getElementById('wrongPass')?.classList.remove('hidden');
+  wrongPassword() {
+    document.getElementById('passwordInput')!.classList.add('border-red-500');
+    document.getElementById('wrongPass')!.classList.remove('hidden');
   }
 }
