@@ -1,14 +1,15 @@
-<div id="landingWrapper">
+<section id="landingWrapper">
   <h1>Welcome to <span>Budget-Holder!</span></h1>
   <p>Controlling your money starts here!</p>
+  <button type="button" id="registerBtn" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onclick="location.href = 'register';">Register</button>
   <br>or<br>
-  <button type="button" id="registerBtn" onclick="location.href = 'register';">Register</button>
-</div>
-<div class="registerFormWrapper">
+</section>
+<section class="registerFormWrapper">
   <div class="w-full max-w-xs registerForm">
     <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <span class="bg-center text-gray-900 text-lg font-bold mb-4">Login</span>
       <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+        <label class="block text-gray-500 text-sm font-bold mb-2" for="username">
           Username
         </label>
         <input
@@ -16,7 +17,7 @@
           id="username" type="text" placeholder="Username">
       </div>
       <div class="mb-6">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+        <label class="block text-gray-500 text-sm font-bold mb-2" for="password">
           Password
         </label>
         <input
@@ -36,4 +37,4 @@
       </div>
     </form>
   </div>
-</div>
+</section>
