@@ -9,7 +9,11 @@ $element-background : #EEEEEE;
 $beige-button-color: #D8D2CB;
 $blue-gray:#7C99AC;
 
-body{
-  background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 675 900' width='675' height='900' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='675' height='900' fill='%231C658C'%3E%3C/rect%3E%3Cpath d='M0 405L22.5 409.3C45 413.7 90 422.3 135 414.3C180 406.3 225 381.7 270 379.3C315 377 360 397 405 403.2C450 409.3 495 401.7 540 391C585 380.3 630 366.7 652.5 359.8L675 353L675 0L652.5 0C630 0 585 0 540 0C495 0 450 0 405 0C360 0 315 0 270 0C225 0 180 0 135 0C90 0 45 0 22.5 0L0 0Z' fill='%23EEEEEE' stroke-linecap='round' stroke-linejoin='miter'%3E%3C/path%3E%3C/svg%3E");
-  background-color: $dark-theme-background;
+
+@media screen and (max-width: 992px) {
+  body{
+    background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 675 900' width='675' height='900' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='675' height='900' fill='%231C658C'%3E%3C/rect%3E%3Cpath d='M0 405L22.5 409.3C45 413.7 90 422.3 135 414.3C180 406.3 225 381.7 270 379.3C315 377 360 397 405 403.2C450 409.3 495 401.7 540 391C585 380.3 630 366.7 652.5 359.8L675 353L675 0L652.5 0C630 0 585 0 540 0C495 0 450 0 405 0C360 0 315 0 270 0C225 0 180 0 135 0C90 0 45 0 22.5 0L0 0Z' fill='%23EEEEEE' stroke-linecap='round' stroke-linejoin='miter'%3E%3C/path%3E%3C/svg%3E");
+    background-color: $dark-theme-background;
+  }
 }
+
