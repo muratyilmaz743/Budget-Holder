@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import * as KUTE from 'kute.js'
+import {Component, OnInit, ViewChild} from '@angular/core';
+
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
@@ -7,18 +7,14 @@ import * as KUTE from 'kute.js'
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() {
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    // @ts-ignore
-    var tween = KUTE.to('#blob1', {path: '#blob1'}, {path: '#blob2'}).start();
-// OR
   }
 
   signingFunc() {
     /*wrong pass*/
-    this.wrongPassword();
+      this.wrongPassword();
   }
 
   wrongPassword() {
