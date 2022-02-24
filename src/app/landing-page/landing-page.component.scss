@@ -3,7 +3,6 @@
 .registerFormWrapper {
   display: flex;
   justify-content: center;
-  top: 450px;
 }
 
 #landingWrapper {
@@ -28,6 +27,7 @@
 }
 
 .registerFormWrapper {
+  margin-top: 15px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -45,19 +45,24 @@
   align-items: center;
   justify-content: center;
   background-size: 300% 300%;
-  background-image: linear-gradient(-45deg, rgba(59, 173, 227, 1) 0%, rgba(87, 111, 230, 1) 25%, rgba(152, 68, 183, 1) 51%, rgba(255, 53, 127, 1) 100%);
+  background-image: linear-gradient(-45deg, #398ab9, #498db6, #5790b4, #6392b1, #6e95af, #6c92ab, #698fa8, #678ca4, #57829e, #467898, #346f92, #1c658c);
   animation: AnimateBG 10s ease infinite;
 }
 @keyframes AnimateBG {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 }
 
+@media screen and (max-width: 600px) {
+  #moneyMan{
+    display: none;
+  }
+}
 
