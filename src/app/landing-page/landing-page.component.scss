@@ -45,8 +45,8 @@
   align-items: center;
   justify-content: center;
   background-size: 300% 300%;
-  background-image: linear-gradient(-45deg, #398ab9, #498db6, #5790b4, #6392b1, #6e95af, #6c92ab, #698fa8, #678ca4, #57829e, #467898, #346f92, #1c658c);
-  animation: AnimateBG 10s ease infinite;
+  background-image: linear-gradient(90deg, #398ab9, #498db6, #5790b4, #6392b1, #6e95af, #6c92ab, #698fa8, #678ca4, #57829e, #467898, #346f92, #1c658c);
+  animation: AnimateBG 5s ease infinite;
 }
 @keyframes AnimateBG {
   0% {
@@ -60,9 +60,13 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  #moneyMan{
-    display: none;
+@media screen and (min-width: 600px) {
+  #landingWrapper{
+    position: absolute;
+    top: 35%;
+  }
+  .registerFormWrapper{
+
   }
 }
 
