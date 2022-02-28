@@ -8,13 +8,16 @@
 #landingWrapper {
   text-align: center;
   margin-top: 50px;
-
+  max-width: 600px;
+  background-color: white;
   #registerBtn {
     margin: 20px 0 20px 0;
   }
 
   h1 {
     font-size: 45px;
+    font-family: 'Oxygen', sans-serif;
+    margin: 0.25rem;
   }
 
   span {
@@ -22,7 +25,10 @@
   }
 
   p {
+    margin: 0.25rem;
+    color: $light-theme-background;
     font-size: 20px;
+    font-family: 'Assistant', sans-serif;
   }
 }
 
@@ -62,7 +68,7 @@
 @media screen and (min-width: 600px) {
   #landingWrapper, .registerFormWrapper{
     position: absolute;
-    top: 35%;
+    top: 33%;
   }
   .registerFormWrapper{
     left: 60%;
