@@ -1,14 +1,26 @@
 @import "src/styles";
 a {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  left: 1em;
+  top:1em;
   text-decoration: inherit;
   color: black;
-  text-align: center;
+  margin-bottom: 1em;
 }
 
 #page {
   font-size: 25px;
   height: 40px;
+}
+
+#logo{
+  height: 2rem;
+}
+@media screen and (max-width: 600px) {
+  a{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
