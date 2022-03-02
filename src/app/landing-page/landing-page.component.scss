@@ -9,7 +9,7 @@
   text-align: center;
   margin-top: 50px;
   max-width: 600px;
-  background-color: white;
+  background-color: rgba(256,256,256, 0.1);
   #registerBtn {
     margin: 20px 0 20px 0;
   }
@@ -52,6 +52,8 @@
   background-size: 300% 300%;
   background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
   animation: AnimateBG 5s ease infinite;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
 }
 @keyframes AnimateBG {
   0% {
@@ -68,7 +70,7 @@
 @media screen and (min-width: 600px) {
   #landingWrapper, .registerFormWrapper{
     position: absolute;
-    top: 33%;
+    top: 30%;
   }
   .registerFormWrapper{
     left: 60%;
