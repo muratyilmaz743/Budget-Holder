@@ -11,6 +11,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({
   declarations: [
@@ -21,14 +22,15 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     RegisterPageComponent,
     LandingPageComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    BrowserAnimationsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        BrowserAnimationsModule,
+        MatTabsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
