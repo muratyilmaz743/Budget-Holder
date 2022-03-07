@@ -3,16 +3,12 @@
     <h1>Welcome to <span>Hold-Budget!</span></h1>
     <p>Controlling your money starts here!</p>
     <p>Hold-Budget is a free tool for save and control your money in an easy way. </p>
-    <button type="button" id="registerBtn"
-            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-            onclick="location.href = 'register';">Go!
-    </button>
   </section>
-  <section class="registerFormWrapper">
-      <mat-tab-group [disableRipple]=true class="header-less-tabs">
+  <section class="registerFormWrapper shadow-2xl rounded">
+      <mat-tab-group class="header-less-tabs" [selectedIndex]="selectedIndex">
         <mat-tab label="Log In">
           <div class="w-full max-w-xs registerForm">
-            <form class="bg-white shadow-2xl rounded px-8 pt-6 pb-8 mb-4">
+            <form class="shadow-m rounded px-8 pt-6 pb-8 mb-4">
               <span class="bg-center text-gray-900 text-lg font-bold mb-4">Login</span>
               <div class="mb-4">
                 <label class="block text-gray-500 text-sm font-bold mb-2" for="username">
@@ -37,16 +33,18 @@
                   type="button" (click)="signingFunc()">
                   Sign In
                 </button>
-                <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
-                  Forgot Password?
-                </a>
+                <button
+                  class="bg-white-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  type="button" (click)="selectTab(1)">
+                  Register
+                </button>
               </div>
             </form>
           </div>
         </mat-tab>
         <mat-tab label="Sıgn Up">
             <div class="w-full max-w-xs registerForm">
-              <form class="bg-white shadow-2xl rounded px-8 pt-6 pb-8 mb-4">
+              <form class="shadow-m rounded px-8 pt-6 pb-8 mb-4">
                 <span class="bg-center text-gray-900 text-lg font-bold mb-4">Sign Up</span>
                 <div class="mb-4">
                   <label class="block text-gray-500 text-sm font-bold mb-2" for="username">
@@ -86,13 +84,15 @@
                     type="button" (click)="signingFunc()">
                     Sign Up
                   </button>
+                  <button
+                    class="bg-white-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="button" (click)="selectTab(0)">
+                    Login
+                  </button>
                 </div>
               </form>
             </div>
         </mat-tab>
       </mat-tab-group>
   </section>
-  <div class="bg">
-
-  </div>
 </div>

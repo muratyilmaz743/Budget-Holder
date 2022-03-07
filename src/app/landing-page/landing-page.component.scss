@@ -1,12 +1,17 @@
 @import "src/styles";
 
+body{
+  background-color: $black;
+}
 .registerFormWrapper {
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  .header-less-tabs{
-    .mat-tab-label-active {
-      background-color: white !important;;
+
+  .header-less-tabs {
+    .mat-tab-header {
+      display: none !important;
     }
   }
 }
@@ -14,7 +19,7 @@
 #landingWrapper {
   text-align: center;
   margin-top: 50px;
-  background-color: rgba(256,256,256, 0.1);
+
   #registerBtn {
     margin: 20px 0 20px 0;
   }
@@ -44,22 +49,17 @@
   justify-content: center;
 }
 
-.bg {
+.registerFormWrapper, #landingWrapper {
   z-index: -1;
-  position:fixed;
-  width:100%;
-  height:100%;
-  top:0;
-  left:0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-size: 300% 300%;
   background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
   animation: AnimateBG 5s ease infinite;
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
+
 }
+
 @keyframes AnimateBG {
   0% {
     background-position: 0 50%;
@@ -73,8 +73,51 @@
 }
 
 @media screen and (min-width: 600px) {
-  .container{
-    width: 1000px;
+  #landingWrapper{
+    height: 200px;
+    position: absolute;
+    left: 20vw;
+    top: 30vh;
+  }
+  .registerFormWrapper{
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    left: 60vw;
+    top: 22vh;
+  }
+}
+
+.mat-tab-body {
+  animation: fade-out 0.5s;
+  opacity: 0;
+}
+.mat-tab-body.mat-tab-body-active {
+  animation: fade-in 0.5s;
+  opacity: 1;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

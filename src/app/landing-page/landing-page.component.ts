@@ -7,7 +7,7 @@ import {Component, ElementRef, OnInit, ViewEncapsulation} from "@angular/core";
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
-
+  selectedIndex = 0;
   constructor() { }
 
   ngOnInit(): void {
@@ -21,5 +21,9 @@ export class LandingPageComponent implements OnInit {
   wrongPassword() {
     document.getElementById('passwordInput')!.classList.add('border-red-500');
     document.getElementById('wrongPass')!.classList.remove('hidden');
+  }
+
+  selectTab(index: number): void {
+    this.selectedIndex = index;
   }
 }
