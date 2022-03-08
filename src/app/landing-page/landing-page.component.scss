@@ -1,13 +1,15 @@
 @import "src/styles";
 
-body{
+body {
   background-color: $black;
 }
+
 .registerFormWrapper {
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 15px;
 
   .header-less-tabs {
     .mat-tab-header {
@@ -19,6 +21,8 @@ body{
 #landingWrapper {
   text-align: center;
   margin-top: 50px;
+  top: 20px;
+  padding: 20px;
 
   #registerBtn {
     margin: 20px 0 20px 0;
@@ -26,7 +30,7 @@ body{
 
   h1 {
     font-size: 45px;
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Bodoni Moda', serif;
     margin: 0.25rem;
   }
 
@@ -36,50 +40,40 @@ body{
 
   p {
     margin: 0.25rem;
-    color: $light-theme-background;
+    color: $black;
     font-size: 20px;
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Epilogue', sans-serif;
   }
 }
 
-.registerFormWrapper {
-  margin-top: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.mat-tab-body {
+  animation: fade-out 0.5s;
+  opacity: 0;
+}
+
+.mat-tab-body.mat-tab-body-active {
+  animation: fade-in 0.5s;
+  opacity: 1;
 }
 
 .registerFormWrapper, #landingWrapper {
   z-index: -1;
-  position: fixed;
   top: 0;
   left: 0;
   background-size: 300% 300%;
   background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
   animation: AnimateBG 5s ease infinite;
-
 }
 
-@keyframes AnimateBG {
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
-}
 
-@media screen and (min-width: 600px) {
-  #landingWrapper{
+@media screen and (min-width: 800px) {
+  #landingWrapper {
     height: 200px;
     position: absolute;
     left: 20vw;
     top: 30vh;
   }
-  .registerFormWrapper{
+  .registerFormWrapper {
     width: 300px;
     height: 500px;
     position: absolute;
@@ -88,14 +82,6 @@ body{
   }
 }
 
-.mat-tab-body {
-  animation: fade-out 0.5s;
-  opacity: 0;
-}
-.mat-tab-body.mat-tab-body-active {
-  animation: fade-in 0.5s;
-  opacity: 1;
-}
 
 @keyframes fade-in {
   0% {
@@ -118,6 +104,18 @@ body{
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes AnimateBG {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
   }
 }
 
