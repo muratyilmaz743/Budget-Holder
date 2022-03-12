@@ -5,6 +5,7 @@ body {
 }
 
 .registerFormWrapper {
+  border: $white 2px solid;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -20,9 +21,11 @@ body {
 
 #landingWrapper {
   text-align: center;
-  margin-top: 50px;
   top: 20px;
-  padding: 20px;
+
+  #WelcomingFirst {
+    border: $white 2px solid;
+  }
 
   > div {
     padding: 20px;
@@ -31,7 +34,6 @@ body {
   div:not(:first-child) {
     color: $white;
   }
-
 
   #registerBtn {
     margin: 20px 0 20px 0;
@@ -89,9 +91,13 @@ body {
   #landingWrapper, #welcoming {
     height: 200px;
     position: absolute;
-    left: 15vw;
-    top: 30vh;
+    left: 10vw;
+    top: 40vh;
     max-width: 800px;
+  }
+  #WelcomingFirst {
+    opacity: 1;
+    transition: opacity 0.5s;
   }
   .registerFormWrapper {
     width: 300px;
@@ -99,6 +105,10 @@ body {
     position: fixed;
     left: 65vw;
     top: 22vh;
+  }
+  #WelocomingSecond {
+    opacity: 0.0;
+    transition: opacity 0.5s, top 0.5s;
   }
 }
 
