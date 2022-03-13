@@ -21,13 +21,13 @@ export class LandingPageComponent implements OnInit {
     window.addEventListener('wheel', function (e) {
       var wheelDir = wheelCalculator(e.deltaY);
 
-
       $(firstWelcome).css("opacity", wheelDir);
+      $(secondWelcome).css("opacity", -wheelDir);
     });
 
       function wheelCalculator(wheelDelta: number) {
-        if (wheelDelta > 0) return 0.3;
-        else if (wheelDelta < 0) return -0.3;
+        if (wheelDelta > 0) return -1;
+        else if (wheelDelta < 0) return 1;
         else return 0;
       }
 
