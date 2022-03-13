@@ -1,4 +1,6 @@
-import {Component, ElementRef, OnInit, ViewEncapsulation} from "@angular/core";
+import {Component, OnInit, ViewEncapsulation} from "@angular/core";
+
+declare var $: any;
 
 @Component({
   encapsulation: ViewEncapsulation.None,
@@ -8,14 +10,32 @@ import {Component, ElementRef, OnInit, ViewEncapsulation} from "@angular/core";
 })
 export class LandingPageComponent implements OnInit {
   selectedIndex = 0;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+    const firstWelcome = document.getElementById("WelcomingFirst");
+    const secondWelcome = document.getElementById("WelcomingSecond");
+
+    window.addEventListener('wheel', function (e) {
+      var wheelDir = wheelCalculator(e.deltaY);
+
+
+      $(firstWelcome).css("opacity", wheelDir);
+    });
+
+      function wheelCalculator(wheelDelta: number) {
+        if (wheelDelta > 0) return 0.3;
+        else if (wheelDelta < 0) return -0.3;
+        else return 0;
+      }
+
   }
 
   signingFunc() {
     /*wrong pass*/
-      this.wrongPassword();
+    this.wrongPassword();
   }
 
   wrongPassword() {
