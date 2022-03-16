@@ -15,7 +15,7 @@ export class LandingPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const firstWelcome = document.getElementById("WelcomingFirst");
+/*    const firstWelcome = document.getElementById("WelcomingFirst");
     const secondWelcome = document.getElementById("WelcomingSecond");
 
     window.addEventListener('wheel', function (e) {
@@ -25,12 +25,11 @@ export class LandingPageComponent implements OnInit {
       $(secondWelcome).css("opacity", -wheelDir);
     });
 
-      function wheelCalculator(wheelDelta: number) {
-        if (wheelDelta > 0) return -1;
-        else if (wheelDelta < 0) return 1;
-        else return 0;
-      }
-
+    function wheelCalculator(wheelDelta: number) {
+      if (wheelDelta > 0) return -1;
+      else if (wheelDelta < 0) return 1;
+      else return 0;
+    }*/
   }
 
   signingFunc() {
