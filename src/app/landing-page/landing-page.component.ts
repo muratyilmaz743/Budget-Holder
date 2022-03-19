@@ -30,7 +30,33 @@ export class LandingPageComponent implements OnInit {
           else if (wheelDelta < 0) return 1;
           else return 0;
         }*/
+    window.addEventListener('wheel', function (e) {
+      // @ts-ignore
+      console.log(elementInViewport('.containerSecond'));
+      if (elementInViewport('.containerSecond')){
+        $('.registerFormWrapper').css('left','80vw');
+      }
+      else {
+        $('.registerFormWrapper').css('left','65vw'); /*this shouldnt be static*/
+      }
+    });
+
+   function elementInViewport(el: string) {
+     var offsets = $(el).offset();
+     var elementTop = offsets.top;
+     var elementBottom = elementTop + $(el).outerHeight();
+
+     var viewportTop = $(window).scrollTop();
+     var viewportBottom = viewportTop + $(window).height();
+
+     return (
+       elementBottom > viewportTop && elementTop < viewportBottom
+     );
+     /*says  if second element is in the viewport or not*/
+    }
   }
+
+
 
   signingFunc() {
     /*wrong pass*/
